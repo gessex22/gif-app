@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const AddCategory = () => {
+export const AddCategory = ({ onNewCategory }) => {
   const [imputValue, setImputValue] = useState("one punch");
 
   const onImputChange = (event) => {
@@ -8,20 +8,20 @@ export const AddCategory = () => {
   };
 
   const onSubmit = (event) => {
-    event.preventDefault()
-    console.log(imputValue)
-  
-  }
+    event.preventDefault();
+    if (imputValue.trim().length <= 1) return;
+    onNewCategory( imputValue.trim() )
+    setImputValue("");
+  };
 
   return (
-  <form onSubmit={ onSubmit}>
-     <input
-      type="text"
-      placeholder="Buscar"
-      value={imputValue}
-      onChange={onImputChange} // (event) => onImputChange(event)
-    />
-  </form>
-   
+    <form onSubmit={onSubmit}>
+      <input
+        type="text"
+        placeholder="Buscar"
+        value={imputValue}
+        onChange={onImputChange} // (event) => onImputChange(event)
+      />
+    </form>
   );
 };
