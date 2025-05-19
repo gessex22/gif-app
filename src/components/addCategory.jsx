@@ -9,7 +9,7 @@ export const AddCategory = () => {
 
   const onSubmit = (event) => {
     event.preventDefault()
-    console.log(imputValue)
+
   
   }
 
