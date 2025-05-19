@@ -10,7 +10,7 @@ export const AddCategory = ({ onNewCategory }) => {
   const onSubmit = (event) => {
     event.preventDefault();
     if (imputValue.trim().length <= 1) return;
-    onNewCategory( imputValue.trim() )
+    onNewCategory(imputValue.trim());
     setImputValue("");
   };
 
