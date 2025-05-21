@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pb": "npx http-server /.build -o"
   },
   "dependencies": {
     "react": "^19.1.0",

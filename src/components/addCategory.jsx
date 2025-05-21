@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const AddCategory = ({ onNewCategory }) => {
-  const [imputValue, setImputValue] = useState("one punch");
+  const [imputValue, setImputValue] = useState("");
 
   const onImputChange = (event) => {
     setImputValue(event.target.value);

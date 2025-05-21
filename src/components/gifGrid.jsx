@@ -1,15 +1,18 @@
-export const GifGrid = ({category}) =>{
+import { useEffect } from "react";
+import { getGifs } from "../helpers/getGifs";
 
-    const gifs = [1,2,3,4,4,6]
+export const GifGrid = ({ category }) => {
 
-    return  (
+useEffect(  ()=>{
+   getGifs(category);
+}, [])
+
+
+
+
+  return (
     <>
-        <h3> {category}</h3>
-      {
-        gifs.map( gif=> 
-            <p> {gif} </p>
-        )
-      }
+      <h3> {category}</h3>
     </>
-    )
-}
+  );
+};
