@@ -3,7 +3,6 @@ import { AddCategory } from "./components/addCategory";
 import { GifGrid } from "./components/gifGrid";
 
 export const GiftExpertApp = () => {
-
   const [categories, setCategories] = useState(["One Punch"]);
 
   const onAddCategory = (newCat) => {
@@ -11,24 +10,15 @@ export const GiftExpertApp = () => {
     setCategories([newCat, ...categories]);
   };
 
-
-
-
-
-
-
-
-
-
   return (
     <>
-        <h1> Gif expert app</h1>
-        <AddCategory onNewCategory={(event) => onAddCategory(event)} />
-        <ol>
-          {categories.map((item) => (
-            <GifGrid key={item} category={item} />
-          ))}
-        </ol>
+      <h1> Gif expert app</h1>
+      <AddCategory onNewCategory={(event) => onAddCategory(event)} />
+      <ol>
+        {categories.map((item) => (
+          <GifGrid key={item} category={item} />
+        ))}
+      </ol>
     </>
   );
 };
