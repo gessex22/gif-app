@@ -13,7 +13,7 @@ export const GiftExpertApp = () => {
   return (
     <>
       <h1> Gif expert app</h1>
-      <AddCategory onNewCategory={(event) => onAddCategory(event)} />
+      <AddCategory onNewCategory={onAddCategory} />
       <ol>
         {categories.map((item) => (
           <GifGrid key={item} category={item} />
